@@ -31,7 +31,7 @@ const ToggleTitleContainer = styled.div`
 `
 
 const ToggleTitle = styled.div`
-    font-size: 14px;
+    font-size: 16px;
     line-height: 142.6%;
     width: 100%;
     @media screen and (max-width: 768px) {
@@ -56,7 +56,7 @@ const Content = styled.div`
     background-color: ${color.greyBackground};
     color: ${color.primary};
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 142.6%;
     position: relative;
     top: -10px;
