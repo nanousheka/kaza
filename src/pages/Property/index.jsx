@@ -32,7 +32,7 @@ const PropertyTitle = styled.span`
     color: ${color.primary};
 `
 const PropertyLocation = styled.div`
-    font-size: 14px;
+    font-size: 16px;
     line-height: 25.67px;
     color: ${color.primary}
 `
@@ -47,7 +47,7 @@ const PropertyHostNRating = styled.div`
     }
 `
 const PropertyHost = styled.span`
-    font-size: 14px;
+    font-size: 16px;
     line-height: 142.6%;
     text-align: right;
     color: ${color.primary};

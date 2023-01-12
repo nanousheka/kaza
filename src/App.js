@@ -6,8 +6,12 @@ import Quatre104 from './components/404';
 import Property from './pages/Property';
 import Footer from './components/Footer';
 import {Routes, Route} from 'react-router-dom';
+//import { useNavigate } from "react-router-dom";
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
+import Normalize from 'react-normalize';
+
+
 
 const GlobalStyle = createGlobalStyle`
   div {
@@ -33,8 +37,10 @@ const MainContainer = styled.div`
 
 
 function App() {
+
   return (
     <>
+      <Normalize />
       <GlobalStyle />
       <Header />
       <MainContainer>
@@ -42,7 +48,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about-us' element={<AboutUs />} />
           <Route path='/property/:id' element={<Property />} />
-          <Route path='/property/*' element={<Quatre104 />}/>
+          <Route path='/property/*' element={<Quatre104 />} />
+          <Route path="*" element={<Quatre104 />} />
         </Routes>
       </MainContainer>
       <Footer />
