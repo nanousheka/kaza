@@ -8,7 +8,7 @@ const FooterWrapper = styled.div`
     justify-content: center;
     margin-top: 38px;
     height: 160px;
-    max-width: 100vw;
+    width: 100vw;
     background: rgba(0, 0, 0, 1);
 
 `

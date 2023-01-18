@@ -7,22 +7,19 @@ const Quatre104Container = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 80vh;
-    position: relative;
     color: ${color.primary};
 `
 const Quatre100quatre = styled.span`
-    font-size: 288px;
+    font-size: 200px;
     font-weight: 700;
 `
 const Quatre104Message = styled.span`
-    font-size: 36px;
+    font-size: 24px;
     margin-top: 60px;
 `
 const HomeRedirection = styled(Link)`
+    margin-top: 100px;
     font-size: 18px;
-    position: absolute;
-    bottom: 100px;
     &:visited {
         color: ${color.primary};
     }

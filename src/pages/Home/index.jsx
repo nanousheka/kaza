@@ -4,6 +4,7 @@ import color from '../../utils/style/colors';
 import {properties} from '../../datas/properties';
 import Card from '../../components/Card';
 import MainHeading from '../../components/MainHeading';
+import Footer from '../../components/Footer';
 
 const CardsContainerBackground = styled.div`
     display : flex;

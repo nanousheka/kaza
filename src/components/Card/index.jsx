@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom';
 //import color from '../../utils/style/colors';
 
+const cardLength = (1000 - 220)/3;
+
 const CardWrapper = styled(Link)`
     position : relative;
     display: flex;
@@ -9,10 +11,10 @@ const CardWrapper = styled(Link)`
     border-radius : 10px;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), ${(props) => `url(${props.backgroundurl})`};
     background-position: center center;
-    width : 335px;
-    height : 335px;
+    width : ${cardLength}px;
+    height : ${cardLength}px;
     @media screen and (max-width: 768px) {
-        width : 335px;
+        width : 100%;
         height : 255px;
     }
 `

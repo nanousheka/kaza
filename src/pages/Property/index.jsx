@@ -1,4 +1,6 @@
-import {useParams} from 'react-router-dom';
+import {useParams,Navigate} from 'react-router-dom';
+import Quatre104 from '../../components/404';
+import Footer from '../../components/Footer';
 //import {useEffect, useState} from 'react';
 import {properties} from '../../datas/properties';
 import styled from 'styled-components';
@@ -8,6 +10,9 @@ import ToggleContent from '../../components/ToggleContent';
 import Carousel from '../../components/Carousel';
 import PreviousArrow from '../../assets/PreviousArrow/PreviousArrow.svg';
 import NextArrow from '../../assets/NextArrow/NextArrow.svg';
+import MobilePreviousController from '../../assets/mobile-previous-controller.svg';
+import MobileNextController from '../../assets/mobile-next-controller.svg';
+
 
 
 const PropertyMainInfos = styled.div`
@@ -71,15 +76,16 @@ const PropertyRatingStar = styled(Star)`
 
 const PropertyTags = styled.div`
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    width: 100%;
+    max-width: 100%;
     margin-top: 20px;
     @media screen and (max-width: 768px) {
         height: 100%;
         align-items: center;
     }
 `
-const PropertyTag = styled.p`
+const PropertyTag = styled.span`
     display: flex;
     background-color : ${color.primary};
     color: white;
@@ -115,13 +121,20 @@ function Property() {
 
     const range = [1,2,3,4,5]
     
-    const equipments = propertyDatas['equipments'].map(equipment => {
+    const nextController = window.innerWidth < 768 ? MobileNextController : NextArrow;
+    const previousController = window.innerWidth < 768 ? MobilePreviousController : PreviousArrow;
+
+
+    
+    const equipments = propertyDatas ? propertyDatas['equipments'].map(equipment => {
         return <EquipmentsList key={equipment}>{equipment}</EquipmentsList>
-    })
+    }) : null;
 
     return (
-        <>
-            <Carousel width='100%' height='320px' images={propertyDatas.pictures} previousController={PreviousArrow} nextController={NextArrow} />
+        
+        propertyDatas ? 
+            <>
+            <Carousel width='100%' height='320px' images={propertyDatas.pictures} previousController={previousController} nextController={nextController} />
             <PropertyMainInfos>
                 <PropertyIdentification>
                     <PropertyTitle>{propertyDatas.title}</PropertyTitle>
@@ -145,14 +158,14 @@ function Property() {
 
             </PropertyMainInfos>
             
-            
-            
-
             <PropertyDetails>
                 <ToggleContent title='Description' content={propertyDatas.description} width='50%' height='40px' />
                 <ToggleContent title='Equipements' content={equipments} width='50%' height='40px'/>
             </PropertyDetails>
-        </>
+            </> : <>
+                    <Quatre104 />
+                    </>
+         
     )
 
 }
