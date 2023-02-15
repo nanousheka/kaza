@@ -1,18 +1,9 @@
-//import logo from './logo.svg';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import AboutUs from './pages/About_us';
-import Quatre104 from './components/404';
-import Property from './pages/Property';
-import {Routes, Route} from 'react-router-dom';
-//import { useNavigate } from "react-router-dom";
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
 import Normalize from 'react-normalize';
-
-
-
+import MainRoutes from './routes';
 
 const GlobalStyle = createGlobalStyle`
   div {
@@ -36,8 +27,6 @@ const MainContainer = styled.div`
 }
 `
 
-
-
 function App() {
 
   return (
@@ -46,12 +35,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <MainContainer>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about-us' element={<AboutUs />} />
-          <Route path='/property/:id' element={<Property />} />
-          <Route path="*" element={<Quatre104 />} />
-        </Routes>
+          <MainRoutes />
       </MainContainer>
       <Footer />
     </>
