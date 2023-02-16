@@ -9,13 +9,14 @@ const GlobalStyle = createGlobalStyle`
   div {
     font-family: Montserrat, Helvetica, sans-serif;
     font-weight: 500;
+    box-sizing: border-box;
   }
 `
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1000px;
+  width: 1240px;
   min-height: calc(100vh - 160px);
   margin : 0 auto;
   padding: 0 130px;
@@ -23,7 +24,8 @@ const MainContainer = styled.div`
   @media screen and (max-width: 768px) {
     padding : 20px;
     padding-top: 0;
-    margin-top : 0px;
+    margin-top : 15px;
+    width : 100vw;
 }
 `
 
