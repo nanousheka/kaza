@@ -11,6 +11,7 @@ const CardWrapper = styled(Link)`
     border-radius : 10px;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), ${(props) => `url(${props.backgroundurl})`};
     background-position: center center;
+    background-size: cover;
     width : ${cardLength}px;
     height : ${cardLength}px;
     @media screen and (max-width: 768px) {
