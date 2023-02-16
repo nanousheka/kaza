@@ -1,7 +1,6 @@
 import MainHeading from '../../components/MainHeading';
 import AboutUsBackground from '../../assets/about-us-background.png';
 import ToggleContent from '../../components/ToggleContent';
-import Footer from '../../components/Footer';
 import styled from 'styled-components';
 
 const AboutUsContainer = styled.div`

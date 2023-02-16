@@ -14,7 +14,7 @@ const HeaderWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 68px;
-    width: 1000px;
+    width: 1240px;
     margin : 0 auto;
     padding: 0 130px;
     padding-top: 30px;
@@ -22,6 +22,7 @@ const HeaderWrapper = styled.div`
         padding: 20px;
         height: 47px;
         padding-top: 20px;
+        width : 100vw;
     }
 `
 const MainNav = styled.nav`

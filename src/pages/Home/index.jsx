@@ -4,7 +4,6 @@ import color from '../../utils/style/colors';
 import {properties} from '../../datas/properties';
 import Card from '../../components/Card';
 import MainHeading from '../../components/MainHeading';
-import Footer from '../../components/Footer';
 
 const CardsContainerBackground = styled.div`
     display : flex;
@@ -23,7 +22,7 @@ const CardsContainerBackground = styled.div`
 const CardsContainer = styled.div`
     display : flex;
     flex-wrap : wrap;
-    gap: 60px;
+    gap: 50px;
     width: 100%;
     @media screen and (max-width: 768px) {
         gap: 20px;
