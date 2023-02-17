@@ -20,6 +20,8 @@ const PreviousImage = styled.img`
     position: absolute;
     top: 50%;
     left: 25px;
+    transform: translateY(-50%);
+    
     
     @media screen and (max-width: 768px) {
         left: 5px;
@@ -29,7 +31,8 @@ const NextImage = styled.img`
     position: absolute;
     top: 50%;
     right: 25px;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    
     @media screen and (max-width: 768px) {
         right: 5px;
     }
